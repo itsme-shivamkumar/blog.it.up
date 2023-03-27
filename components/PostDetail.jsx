@@ -28,7 +28,9 @@ const PostDetail = ({ post }) => {
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'code-block':
         return <><pre key={index} className="text-md text-gray-200 bg-gray-700 rounded-md font-normal p-4 mb-4">{modifiedText.map((item,i)=><React.Fragment key={i}>{item}</React.Fragment>)}</pre><br/></>
-        case 'image':
+      case 'code':
+        return <><span key={index} className="text-md italic bg-gray-300 rounded-sm font-normal p-4 mb-4">{modifiedText.map((item,i)=><React.Fragment key={i}>{item}</React.Fragment>)}</span><br/></>
+      case 'image':
         return (
           <img
             key={index}

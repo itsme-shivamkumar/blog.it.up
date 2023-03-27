@@ -11,6 +11,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <title>CodeBloggy</title>
           <link rel='icon' href='logo.jpg'/>
         </Head>
         <body>
