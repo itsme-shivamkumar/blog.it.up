@@ -18,7 +18,7 @@ const Header = () => {
         <div className="md:float-left block">
         <img className='inline relative bottom-2 mr-3 rounded-lg' src='/logo.jpg' alt='logo' width='40' height='40' />
           <Link href="/">
-            <span className="cursor-pointer font-bold text-4xl text-white">CodeBloggy</span>
+            <span className="italic cursor-pointer font-bold text-4xl text-white">CodeBloggy</span>
           </Link>
         </div>
         <div className="hidden md:float-left md:contents">
