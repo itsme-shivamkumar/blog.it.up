@@ -5,7 +5,6 @@ import moment from 'moment';
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
-
     if (obj) {
       if (obj.bold) {
         modifiedText = (<b key={index}>{text}</b>);
@@ -27,7 +26,9 @@ const PostDetail = ({ post }) => {
         return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
       case 'heading-four':
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
-      case 'image':
+      case 'code-block':
+        return <><pre key={index} className="text-md text-gray-200 bg-gray-700 rounded-md font-normal p-4 mb-4">{modifiedText.map((item,i)=><React.Fragment key={i}>{item}</React.Fragment>)}</pre><br/></>
+        case 'image':
         return (
           <img
             key={index}
